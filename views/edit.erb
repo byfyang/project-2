@@ -1,0 +1,14 @@
+<h2>Edit Food</h2>
+
+<form action='/food/<%= "#{@food.id}" %>' method="post">
+  <label for="food[name]">Name:</label>
+  <input name="food[name]" value='<%= "#{@food.name}" %>'>
+
+  <label for="food[photo_url]">Photo URL:</label>
+  <input name="food[photo_url]" value='<%= "#{@food.photo_url}" %>'>
+
+  <label for="food[style_location]">Style Location:</label>
+  <input name="food[style_location]" value='<%= "#{@food.style_location}" %>'>
+
+  <input type="submit" value="Create">
+</form>

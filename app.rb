@@ -1,7 +1,7 @@
 class TaiwanFood < Sinatra::Base
 
 	get "/" do 
-		erb "Taiwanese Food is Bomb!"
+		erb :"about"
 	end
 
 
@@ -18,7 +18,7 @@ class TaiwanFood < Sinatra::Base
 	post '/food' do
 		@foods = Food.create(params[:food])
 		@foods.save
-		redirect "/"
+		redirect "/food"
 	end
 
 
@@ -39,5 +39,20 @@ class TaiwanFood < Sinatra::Base
 		redirect("/food")
 	end
 
+  	# edit
+ 	get '/food/:id/edit' do
+   	 	@food = Food.find(params[:id])
+    	erb(:"edit")
+  	end
+
+  # update
+	post '/food/:id' do
+    	@food = Food.find(params[:id])
+    		if @food.update_attributes(params[:food])
+      	redirect("/food")
+    		else
+      	erb(:"edit")
+    	end
+  	end
 
 end

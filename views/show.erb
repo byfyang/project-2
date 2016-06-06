@@ -1,9 +1,7 @@
 <%= food.name %>
 <%= food.style_location %>
 <%= food.meal_time %>
+<img src="<%= @food.photo_url %>">
 
 
-<form action="/food/<%=food.id%>/delete" method="post" class='delete'>
-  <input type="hidden" name="_method" value="delete">
-  <input type='submit' value="Delete">
-</form>
+

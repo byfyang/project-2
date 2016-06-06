@@ -1,20 +1,23 @@
-
-
+<h2>Nom Nom Nom Taiwan Food All Day
+</h2>
 
 <% @foods.each do |food| %>
-
+  <p>
   <ul>
-    <%= food.name %>
-    <%= food.style_location %>
-    <%= food.meal_time %>
-    <%= food.photo_url %>
+    Name: <%= food.name %><br>
+    Location: <%= food.style_location %><br>
+    When: <%= food.meal_time %><br>
 
-  <form method="POST" action="/food/<%=food.id%>/delete">
+<!--     <img src="<%= food.photo_url %>"> -->
+
+    <form method="POST" action="/food/<%=food.id%>/delete">
         <input type="hidden" name="_method" value="delete">
         <input type='submit' value="Delete">
-  </form>
+    </form>
 
+    <form action ="/food/<%=food.id%>/edit" method='get'><button>Edit</button>
+    </form>
 
   </ul>
-
-  <% end %>
+  </p>
+<% end %>
