@@ -9,6 +9,11 @@
     <%= food.meal_time %>
     <%= food.photo_url %>
 
+  <form method="POST" action="/food/<%=food.id%>/delete">
+        <input type="hidden" name="_method" value="delete">
+        <input type='submit' value="Delete">
+  </form>
+
 
   </ul>
 
