@@ -1,0 +1,3 @@
+development:
+  adapter: postgresql
+  database: taiwanfood_dev
