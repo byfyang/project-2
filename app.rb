@@ -28,11 +28,6 @@ class TaiwanFood < Sinatra::Base
 		erb :"show"
 	end
 
-	# get '/food/show/:id' do
-	# 	@foods = Food.find(params[:id])
-	# 	erb :show
-	# end
-
 
 #delete route and then redirecting to food index page
 	post '/food/:id/delete' do

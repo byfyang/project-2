@@ -7,6 +7,4 @@ require './models/food'
 require './app'
 
 
-
-
 run TaiwanFood

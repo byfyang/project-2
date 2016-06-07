@@ -1,6 +1,6 @@
 <h2>Edit Food</h2>
 
-<form action='/food/<%= "#{@food.id}" %>' method="post">
+<!-- <form action='/food/<%= "#{@food.id}" %>' method="post">
   <label for="food[name]">Name:</label>
   <input name="food[name]" value='<%= "#{@food.name}" %>'>
 	<br>
@@ -17,5 +17,31 @@
   <input name="food[photo_url]" value='<%= "#{@food.photo_url}" %>'>
   	<br>
 
-  <input type="submit" value="Edit">
-</form>
+  <input type="submit" value="Save">
+</form> -->
+
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="'<%= "#{@food.name}" %>'" id="first_name" type="text" class="validate">
+          <label for="first_name">Your Creation's Name</label>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="password" type="password" class="validate">
+          <label for="password">Location</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="email" type="email" class="validate">
+          <label for="email">When To Eat?</label>
+        </div>
+      </div>
+    </form>
+    <input type="submit" value="Save">
+  </div>
