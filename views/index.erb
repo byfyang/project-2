@@ -1,5 +1,4 @@
-<h2>Nom Nom Nom Taiwan Food All Day
-</h2>
+<h2>Nom Nom Nom Taiwan Food All Day</h2>
 
 <% @foods.each do |food| %>
   <p>
@@ -8,7 +7,7 @@
     Location: <%= food.style_location %><br>
     When: <%= food.meal_time %><br>
 
-<!--     <img src="<%= food.photo_url %>"> -->
+    <form method='GET' action="/food/<%=food.id%>"><button>More Info</button></form>
 
     <form method="POST" action="/food/<%=food.id%>/delete">
         <input type="hidden" name="_method" value="delete">
@@ -18,6 +17,6 @@
     <form action ="/food/<%=food.id%>/edit" method='get'><button>Edit</button>
     </form>
 
-  </ul>
+  </ul> 
   </p>
 <% end %>
