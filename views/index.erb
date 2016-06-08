@@ -1,8 +1,9 @@
 <h2>Nom Nom Nom Taiwan Food All Day</h2>
 
+
 <% @foods.each do |food| %>
-  <p>
-  <ul>
+
+<!--   <ul>
     Name: <%= food.name %><br>
     Location: <%= food.style_location %><br>
     When: <%= food.meal_time %><br>
@@ -17,6 +18,31 @@
     <form action ="/food/<%=food.id%>/edit" method='get'><button>Edit</button>
     </form>
 
-  </ul> 
-  </p>
+  </ul>  -->
+
+  <div class="card small">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="<%=food.photo_url %>">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4"> <%=food.name%> <i class="material-icons right">more_vert</i></span>
+      <!-- <p><a href="#">This is a link</a></p> -->
+    </div>
+    <div class="card-reveal small">
+      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <p>
+          Location: <%= food.style_location %><br>
+          When: <%= food.meal_time %><br>
+
+          <form method='GET' action="/food/<%=food.id%>"><button>More Info</button></form>
+          <form method="POST" action="/food/<%=food.id%>/delete">
+          <input type="hidden" name="_method" value="delete">
+          <input type='submit' value="Delete">
+          </form>
+
+          <form action ="/food/<%=food.id%>/edit" method='get'><button>Edit</button>
+      </p>
+    </div>
+  </div>
+
 <% end %>

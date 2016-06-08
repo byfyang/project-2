@@ -7,6 +7,8 @@
 
     <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.min.css"  media="screen,projection"/>
 
+    <link rel="stylesheet" type="text/css" href="/materialize/css/style.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 </head>
@@ -18,30 +20,36 @@
   <header>
 
   <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Taiwan Food Blog</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+    <div class="nav-wrapper #d50000 red accent-4">
+      <a class="brand-logo">Taiwan Food Blog</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
         <li><a href="/food">Taiwanese Food</a></li>
-        <li><a href="/">About</a></li>
+        <li><a href="/drink">Drinks</a></li>
         <li><a href="/food/new">Add Your Own Food</a></li>
+        <li><a href="/drink/new">Add Your Drink</a></li>
+        <li><a href="/">About</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="/food">Taiwanese Food</a></li>
+        <li><a href="/drink">Drinks</a></li>
+        <li><a href="/food/new">Add Your Own Food</a></li>
+        <li><a href="/drink/new">Add Your Drink</a></li>
+        <li><a href="/">About</a></li>
       </ul>
     </div>
   </nav>
 
-    <!-- <nav>
-      <ul>
-        <li><a href="/food">Taiwanese Food</a></li>
-        <li><a href="/">About</a></li>
-        <li><a href="/Suggestions">Suggestions</a></li>
-        <li><a href="/food/new">Add Your Own Food</a></li>
-      </ul>
-    </nav> -->
   </header>
   <main>
   </main>
-  <%= yield %>
+    <%= yield %>
   <footer>
     &copy; Yangster
   </footer>
+
 </body>
+
+    <script>$( document ).ready(function(){$(".button-collapse").sideNav();});</script>
+
 </html>

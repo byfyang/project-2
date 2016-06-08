@@ -1,5 +1,5 @@
 <h1>Add Your Creation!</h1>
-<form method="POST" action="/food">
+<!-- <form method="POST" action="/food">
   Name: <br>
   <input type="text" name="food[name]" value="name"><br>
   Style Location: <br>
@@ -10,4 +10,38 @@
   <input type="text" name="food[photo_url]" value="Link"><br>
 
   <input type="submit" value="Submit">
-</form>
+</form> -->
+
+
+<div class="row">
+  <form class="col s12" action='/food' method="post">
+      <div class="row">
+        <div class="input-field col s6">
+          <input name="food[name]" id="name" type="text">
+          <label for="name">Your Creation's Name</label>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input name="food[style_location]" id="location" type="text">
+          <label for="style_location">Location</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input name="food[meal_time]"  id="meal_time" type="text">
+          <label for="meal_time">When To Eat?</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input name="food[photo_url]"  id="photo" type="text">
+          <label for="Photo">Photo Link</label>
+        </div>
+      </div>
+    <input type="submit" value="Create">
+  </form>
+ </div>

@@ -5,6 +5,36 @@ class TaiwanFood < Sinatra::Base
 		erb :"about"
 	end
 
+###### ROUTE FOR DRINKS #######
+
+#route to all the drinks in the database
+	get '/drink' do
+		@drinks = Drink.all
+		erb :'/drinks/index'
+	end
+
+#route for drink new form
+	get '/drink/new' do
+		erb :'/drinks/new'
+	end
+
+#route for posting drinks
+	post '/drink' do
+		@drinks = Drink.create(params[:drink])
+		redirect '/drink'	
+	end
+
+#route for individual drink
+	get '/drink/:id' do
+		@drinks = Drink.all
+  		@drink = Drink.find(params[:id])
+	end
+
+
+
+##########END OF ROUTES FOR DRINKS############
+
+############## ROUTES FOR FOODS ############
 #route to all of the food in the databasse
 	get '/food' do
 		@foods = Food.all
@@ -28,7 +58,6 @@ class TaiwanFood < Sinatra::Base
 		erb :"show"
 	end
 
-
 #delete route and then redirecting to food index page
 	post '/food/:id/delete' do
 		@foods = Food.find(params[:id])
@@ -51,5 +80,6 @@ class TaiwanFood < Sinatra::Base
       	erb(:"edit")
     	end
   	end
+######## END OF ROUTE FOR FOOD ##########
 
 end

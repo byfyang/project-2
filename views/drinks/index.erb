@@ -1,0 +1,9 @@
+<ul>
+<% @drinks.each do | drink | %>
+  <li>
+    <p><strong>"<%= drink.name %>", 
+    <%= drink.style %></strong>, 
+	</p>
+  </li>
+<% end %>
+</ul>
