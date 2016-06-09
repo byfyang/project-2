@@ -1,27 +1,5 @@
 <h2>Food For Thought</h2>
 
-<!-- <form action='/food/<%= "#{@food.id}" %>' method="post">
-  <label for="food[name]">Name:</label>
-  <input name="food[name]" value='<%= "#{@food.name}" %>'>
-	<br>
-
-  <label for="food[style_location]">Location:</label>
-  <input name="food[style_location]" value='<%= "#{@food.style_location}" %>'>
-	<br>
-
-  <label for="food[meal_time]">Meal Time:</label>
-  <input name="food[meal_time]" value='<%= "#{@food.meal_time}" %>'>
-	<br>
-
-  <label for="food[photo_url]">Photo URL:</label>
-  <input name="food[photo_url]" value='<%= "#{@food.photo_url}" %>'>
-  	<br>
-
-  <input type="submit" value="Save">
-
-  _method="patch"
-</form> -->
-
 <div class="row">
   <form class="col s12" action='/food/<%= "#{@food.id}" %>' method="post">
       <div class="row">
@@ -56,7 +34,45 @@
           <label for="photo_url">Photo Link</label>
         </div>
       </div>
-
     <input type="submit" value="Save">
   </form>
- </div>
+  
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form action='/food/<%= "#{@food.id}" %>' method="post">
+  <label for="food[name]">Name:</label>
+  <input name="food[name]" value='<%= "#{@food.name}" %>'>
+  <br>
+
+  <label for="food[style_location]">Location:</label>
+  <input name="food[style_location]" value='<%= "#{@food.style_location}" %>'>
+  <br>
+
+  <label for="food[meal_time]">Meal Time:</label>
+  <input name="food[meal_time]" value='<%= "#{@food.meal_time}" %>'>
+  <br>
+
+  <label for="food[photo_url]">Photo URL:</label>
+  <input name="food[photo_url]" value='<%= "#{@food.photo_url}" %>'>
+    <br>
+
+  <input type="submit" value="Save">
+
+  _method="patch"
+</form> -->
