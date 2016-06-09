@@ -1,0 +1,46 @@
+<h2>Nom Nom Nom Taiwan Food All Day</h2>
+
+
+
+
+  <div class ="row">
+    <% @foods.each do |food| %>
+
+    <div class = "col s6">
+
+      <div class="card small">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="<%=food.photo_url %>">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4"> <%=food.name%> <i class="material-icons right">more_vert</i></span>
+            <!-- <p><a href="#">This is a link</a></p> -->
+          </div>
+        <div class="card-reveal small">
+            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+            <p>
+                <li>Location: <%= food.style_location %></li>
+                <li>When: <%= food.meal_time %></li><br>
+
+                <form action="/food/<%=food.id%>" method='get'>
+                  <button class="waves-effect waves-light btn" type='submit'>More Info</button>
+                </form>
+
+                <form method="POST" action="/food/<%=food.id%>/delete">
+      <!--             <input type="hidden" name="_method" value="delete"> -->
+                  <input class="waves-effect waves-light btn" type='submit' value="Delete">
+                </form>
+
+                <form action ="/food/<%=food.id%>/edit" method='get'><button class="waves-effect waves-light btn">Edit</button>
+                </form>
+            </p>
+          </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+
+
+
+

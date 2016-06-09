@@ -1,9 +1,49 @@
-<ul>
-<% @drinks.each do | drink | %>
-  <li>
-    <p><strong>"<%= drink.name %>", 
-    <%= drink.style %></strong>, 
-	</p>
-  </li>
-<% end %>
-</ul>
+<h4>Slurp Slurp Slurp!</h4>
+<!-- <div class="row">
+      <div class="col s6">HIIIII</div>
+      <div class="col s6">HELLLLO</div>
+      <div class="col s6">YEEEEEE</div>
+</div> -->
+
+
+	<div class ="row">
+		<% @drinks.each do | drink | %>
+		<div class = "col s6">
+
+			<div class="card small">
+			    <div class="card-image waves-effect waves-block waves-light">
+			      <img class="activator" src="<%=drink.photo_url %>">
+			    </div>
+			    <div class="card-content">
+			      <span class="card-title activator grey-text text-darken-4"> <%=drink.name%> <i class="material-icons right">more_vert</i></span>
+			      <!-- <p><a href="#">This is a link</a></p> -->
+			    </div>
+			  <div class="card-reveal small">
+			      <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+		      <p>
+
+		      	<li>What is it? <%= drink.style %></li><br>
+
+
+		          <form action="/drink/<%=drink.id%>" method='get'>
+		            <button class="waves-effect waves-light btn" type='submit'>More Info</button>
+		          </form>
+
+		          <form method="POST" action="/drink/<%=drink.id%>/delete">
+		            <input class="waves-effect waves-light btn" type='submit' value="Delete">
+		          </form>
+
+		          <form action ="/drink/<%=drink.id%>/edit" method='get'><button class="waves-effect waves-light btn">Edit</button>
+		          </form>
+		      </p>
+			    </div>
+			</div>
+
+		</div>
+	<% end %>
+	</div>
+
+
+
+
+

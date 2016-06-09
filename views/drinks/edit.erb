@@ -1,0 +1,36 @@
+<h6>How Would You Mix It?</h6>
+
+<div class="row">
+  <form class="col s12" action='/drink/<%="#{@drink.id}"%>' method="post">
+      <div class="row">
+        <div class="input-field col s6">
+          <input name="drink[name]" value='<%= "#{@drink.name}" %>' placeholder="'<%= "#{@drink.name}" %>'" id="name" type="text">
+          <label for="name">Name</label>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input name="drink[style]" value='<%= "#{@drink.style}" %>' placeholder="'<%= "#{@drink.style}"%>'" id="style" type="text">
+          <label for="style">Style</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input name="drink[info]" value='<%= "#{@drink.info}" %>' placeholder="'<%= "#{@drink.info}" %>'" id="info" type="text">
+          <label for="info">Anything Else to Add?</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input name="drink[photo_url]" value='<%= "#{@drink.photo_url}" %>' placeholder="'<%= "#{@drink.photo_url}" %>'" id="photo" type="text">
+          <label for="photo_url">Photo Link</label>
+        </div>
+      </div>
+
+    <input type="submit" value="Save">
+  </form>
+ </div>

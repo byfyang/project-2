@@ -1,8 +1,43 @@
-<h1>Add Your Drink</h1>
-<form method="POST" action="/drink">
+<h1>What Would You Slurp?</h1>
+<!-- <form method="POST" action="/drink">
   Name: <br>
   <input type="text" name="drink[name]" value=""><br>
   Style: <br>
   <input type="text" name="drink[style]" value=""><br>
-  <input type="submit" value="Submit">
-</form>
+  <input class="waves-effect waves-light btn" type="submit" value="Submit">
+</form> -->
+
+<div class="row">
+  <form class="col s12" action='/drink' method="post">
+      <div class="row">
+        <div class="input-field col s6">
+          <input name="drink[name]" id="name" type="text">
+          <label for="name">Name</label>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input name="drink[style]" id="style" type="text">
+          <label for="style">Style</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input name="drink[photo_url]"  id="photo" type="text">
+          <label for="Photo">Photo Link</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input name="drink[info]"  id="info" type="text">
+          <label for="Info">Info</label>
+        </div>
+      </div>
+
+    <input class="waves-effect waves-light btn" type="submit" value="Create">
+  </form>
+ </div>

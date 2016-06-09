@@ -1,0 +1,15 @@
+<h4>Food of the Day!</h4>
+  <div class="row">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="<%=@randomFood.photo_url%>">
+          <span class="card-title"><%=@randomFood.name%></span>
+        </div>
+        <div class="card-content">
+          <li><%=@randomFood.info %> </li>
+          <li><%=@randomFood.style_location %> </li>
+        </div>
+      </div>
+    </div>
+  </div>
