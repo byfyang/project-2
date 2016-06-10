@@ -14,9 +14,10 @@
 
 
 <div class="row">
-  <form class="col s12" action='/food' method="post">
+  <div class = 'col s6'>
+    <form class="col s12" action='/food' method="post">
       <div class="row">
-        <div class="input-field col s6">
+        <div class="input-field col s12">
           <input name="food[name]" id="name" type="text">
           <label for="name">Name</label>
         </div>
@@ -24,27 +25,28 @@
       </div>
 
       <div class="row">
-        <div class="input-field col s6">
-          <input name="food[style_location]" id="location" type="text">
-          <label for="style_location">Where to Eat?</label>
+        <div class="input-field col s12">
+          <input name="food[style_location]" id="location" type="text" value =''>
+          <label id="location-label" for="style_location">Where To Eat?</label>
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s6">
+        <div class="input-field col s12">
           <input name="food[meal_time]"  id="meal_time" type="text">
           <label for="meal_time">When To Eat?</label>
         </div>
       </div>
 
       <div class="row">
-        <div class="input-field col s6">
+
+        <div class="input-field col s12">
           <input name="food[photo_url]"  id="photo" type="text">
           <label for="Photo">Photo Link</label>
         </div>
       </div>
 
       <div class="row">
-        <div class="input-field col s6">
+        <div class="input-field col s12">
           <input name="food[info]"  id="info" type="text">
           <label for="Info">Info</label>
         </div>
@@ -53,7 +55,11 @@
     <input class="waves-effect waves-light btn" type="submit" value="Create">
   </form>
     
+  </div>
+  
+    
     <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-    <div class ='col s6' id = 'map'>MAPS LIVE HERE</div>
+    <div class ='col s6' id = 'map'></div>
 
- </div>
+</div>
+

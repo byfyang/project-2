@@ -1,9 +1,10 @@
 <h2>Food For Thought</h2>
 
 <div class="row">
+  <div class = 'col s6'>
   <form class="col s12" action='/food/<%= "#{@food.id}" %>' method="post">
       <div class="row">
-        <div class="input-field col s6">
+        <div class="input-field col s12">
           <input name="food[name]" value='<%= "#{@food.name}" %>' placeholder="'<%= "#{@food.name}" %>'" id="name" type="text">
           <label for="name">Name</label>
         </div>
@@ -11,42 +12,37 @@
       </div>
 
       <div class="row">
-        <div class="input-field col s6">
+        <div class="input-field col s12">
           <input name="food[style_location]" value='<%= "#{@food.style_location}" %>' placeholder="'<%= "#{@food.style_location}"%>'" id="location" type="text">
-          <label for="style_location">Location</label>
+          <label id="location-label" for="style_location">Location</label>
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s6">
+        <div class="input-field col s12">
           <input name="food[meal_time]" value='<%= "#{@food.meal_time}" %>'placeholder="'<%= "#{@food.meal_time}" %>'" id="meal_time" type="text">
           <label for="meal_time">When To Eat?</label>
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s6">
+        <div class="input-field col s12">
           <input name="food[info]" value='<%= "#{@food.info}" %>' placeholder="'<%= "#{@food.info}" %>'" id="info" type="text">
           <label for="info">Anything Else to Add?</label>
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s6">
+        <div class="input-field col s12">
           <input name="food[photo_url]" value='<%= "#{@food.photo_url}" %>' placeholder="'<%= "#{@food.photo_url}" %>'" id="photo" type="text">
           <label for="photo_url">Photo Link</label>
         </div>
       </div>
-    <input type="submit" value="Save">
+    <input class="waves-effect waves-light btn" type="submit" value="Save">
   </form>
+  </div>
+
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <div class ='col s6' id = 'map'></div>
   
-
-
-
-
 </div>
-
-
-
-
-
 
 
 
