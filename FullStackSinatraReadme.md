@@ -13,8 +13,8 @@ Copy the heroku hosted url and it'll take you the application site.
 
 
 ###Approach Taken:
-User Stories via Trello: https://trello.com/b/dhjmavCs
-Original Wireframe: https://drive.google.com/file/d/0B9e_HP5YxBjpNnpnMHkydWhMQVE/view?usp=sharing
+* User Stories via Trello: https://trello.com/b/dhjmavCs
+* Original Wireframe: https://drive.google.com/file/d/0B9e_HP5YxBjpNnpnMHkydWhMQVE/view?usp=sharing
 
 The purpose of this app is to allow a user to document what they ate and some useful additional information about the food item including the location via using google maps. This app has a very specific scope. I originally created this project for my own personal use. 
 
