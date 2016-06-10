@@ -6,9 +6,9 @@ Copy the heroku hosted url and it'll take you the application site.
 
 
 ###Technologies Used:
-JQuery/Javascript - used to interact between Javascript and the erb/html form. Specifically used to allow Google Maps API to be utilized
-Sinatra - used as the server-end framework: CRUD and restful Routes
-Ruby - server end code to populate data to the routes
+* **JQuery/Javascript - used to interact between Javascript and the erb/html form. Specifically used to allow Google Maps API to be utilized
+* **Sinatra - used as the server-end framework: CRUD and restful Routes
+* **Ruby - server end code to populate data to the routes
 
 
 ###Approach Taken:
