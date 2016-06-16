@@ -10,6 +10,7 @@ Copy the heroku hosted url and it'll take you the application site.
 * Sinatra - used as the server-end framework: CRUD and restful Routes
 * Ruby - server end code to populate data to the routes
 * ERB format to display the web pages
+* Materialize CSS usage
 
 
 ###Approach Taken:
